@@ -16,8 +16,7 @@
     <gap:plugin name="ChildBrowser"/>
     <gap:plugin name="BarcodeScanner"/>
     <plugin name="YouTube" value="com.remcob00.plugins.youtube.YouTube"/>
-    <gap:plugin name="SMSPlugin"/>
-     
+       
 
     <feature name="http://api.phonegap.com/1.0/device" />
 

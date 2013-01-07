@@ -50,35 +50,12 @@ var app = {
     scan: function() {
         console.log('scanning');
         try {
-            window.plugins.youtube.show({ videoid: "THE_VIDEO"},
+             window.plugins.youtube.show({ videoid: "Messi"},
                     function() {
                           alert('Message sent successfully');  
                     }, function() {
                           alert('Failed');  
                     } );
-            
-            window.plugins.barcodeScanner.scan(function(args) {
-                console.log("Scanner result: \n" +
-                    "text: " + args.text + "\n" +
-                    "format: " + args.format + "\n" +
-                    "cancelled: " + args.cancelled + "\n");
-                /*
-                if (args.format == "QR_CODE") {
-                    window.plugins.childBrowser.showWebPage(args.text, { showLocationBar: false });
-                }
-                */
-                document.getElementById("info").innerHTML = args.text;
-                window.plugins.sms.send($('00971503946958').val(), 
-                $('This is phone gap').val(), 
-                function () { 
-                   alert('Message sent successfully');  
-                },
-                function (e) {
-                    alert('Message Failed:' + e);
-                }
-            );
-                console.log(args);
-        });
         } catch (ex) {
             console.log(ex.message);
         }
